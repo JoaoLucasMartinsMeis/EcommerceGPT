@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce de Eletrônicos</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('cart')">Carrinho</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção Home - Exibição dos Produtos -->
+  <section id="home" class="section">
+    <h1>Bem-vindo ao E-commerce de Eletrônicos!</h1>
+    <p>Encontre os melhores produtos eletrônicos com descontos incríveis.</p>
+
+    <h2>Produtos em Destaque</h2>
+    <div class="product-list">
+      <div class="product">
+        <img src="https://images.pexels.com/photos/16891501/pexels-photo-16891501/free-photo-of-smartphone-dispositivo-aparelho-equipamento.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Produto 1">
+        <h3>Smartphone XYZ</h3>
+        <p>R$ 2.499,99</p>
+        <button class="add-to-cart" onclick="addToCart('Smartphone XYZ', 2499.99)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product">
+        <img src="https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Produto 2">
+        <h3>Notebook ABC</h3>
+        <p>R$ 4.499,99</p>
+        <button class="add-to-cart" onclick="addToCart('Notebook ABC', 4499.99)">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção do Carrinho -->
+  <section id="cart" class="section" style="display: none;">
+    <h2>Seu Carrinho</h2>
+    <div class="cart-items"></div>
+    <p class="total">Total: R$ 0,00</p>
+    <button onclick="clearCart()">Limpar Carrinho</button>
+    <button>Finalizar Compra</button>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2024 E-commerce Eletrônicos. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
